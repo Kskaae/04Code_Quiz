@@ -2,6 +2,12 @@
 const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
+//I am presented with a question
+
+submitButton.onclick = function () {
+showResults(quizContainer, questions, resultsContainer);
+
+}
 const myQuestions = [
     {
         question: "what is the greatest film of all time?",
@@ -27,76 +33,36 @@ const myQuestions = [
             a: "Now I'm Gonna Have To Kill This F***ing Clown",
             b: "Never fear, I is here.",
             c: "Show me the money!",
-            d: "I am the Kwisatz Haderach. "
+            d: "I am the Kwisatz Haderach."
         },
         correctAnswer: "d"
     }
 ];
-   let myArray=[ 1, 12, "a",{
-     popcorn:"extraButter", sweet:"candy", soda:"coke", pizza:"pepperoni", isHappy: true 
 
- }, false, [1, 2, 3], {
-     myKey:"myValue"
- } 
-  ]
-  let myItem = myArray[1]
-  let mySecondItem = myArray[0]
-  let entireObject = myArray[3]
-  let keyFromObject = myArray[3].popcorn
-  let happyVar = myArray [3].isHappy 
+    //WHEN I click the start button, this happens:
+    startButton.onclick = function () {
+        showResults(quizContainer, questions, resultsContainer);
+    let seconds = 0;
 
+    let interval; 
 
-  let x=true
-  let y= 1
-  let z= "myString"
-  let a = ["arrayItem"]
-  let b = {color:"blue"}
+    function buildQuiz(mins) {
 
-    //WHEN I click the start button
+        seconds = mins*60 || 0;     
+        interval = setInterval(function() {
+      
+             seconds--;
+             if(!seconds){
+                  clearInterval(interval); 
+                  alert("Nicely Done!");
 
 
-    function buildQuiz() {
-
-//I am presented with a question
-//Upon "click" the user will see the first question, 
-//followed by three answer choices
-// Using the quiz container variable we capture the div
-//with id of quiz and populate it with first item in myQuestions array
-//Use innerHTML function
-//document.getElementById("demo").innerHTML = "Paragraph changed!";
-document.getElementById("quiz").innerHTML = myQuestions
-    }
+document.getElementById("quiz").innerHTML = myQuestions;
 
 
 
-
-function showResults() { }
-
+submitButton.onclick = function(){
+	showResults(questions, quizContainer, resultsContainer);
+function showResults() { 
 buildQuiz();
-submitButton.addEventListener('click', shoeResults);
-
-
-
-
-
-
-
-
-
-
-
-
-//THEN a timer starts and 
-
-
-//WHEN I answer a question
-
-//THEN I am presented with another question
-
-//WHEN I answer a question incorrectly
-
-//THEN time is subtracted from the clock
-//WHEN all questions are answered or the timer reaches 0
-//THEN the game is over
-//WHEN the game is over
-//THEN I can save my initials and score
+submitButton.addEventListener('click', showResults);

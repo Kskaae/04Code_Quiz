@@ -1,7 +1,12 @@
 # 04Code_Quiz
+Submission for Week  : 
+04Code_Quiz 
+
+My goals included:
+ Creating a functional quiz using JavaScript.  I attempted to design the code with the following acceptance criteria:
 
 
-
+ 
 GIVEN I am taking a code quiz
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
@@ -13,3 +18,17 @@ WHEN all questions are answered or the timer reaches 0
 THEN the game is over
 WHEN the game is over
 THEN I can save my initials and score
+
+
+
+This project, was exceptionally difficult for me using JavaScript again, I got lost on several occasions. I tried different references and ended up deleting a lot of information over and over again. I used tutoring also but was unable to make a successful quiz. Ultimately, I am more confident with variables, strings, arrays, etc… but still confused on placement and the overall order of things. I plan to dedicate more timme to revisiting prior class work and reading a book I purchased on JavaScript & Jquery.  
+
+
+
+Special thanks to :
+Anthony Demott -TA 
+David Lovett 
+Brandon Burrus -TA
+John Hernandez -Tutor
+(I know you all work hard to help me out )
+And all of my classmates that lent a hand. 
